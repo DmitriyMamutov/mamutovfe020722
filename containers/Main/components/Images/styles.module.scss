@@ -1,0 +1,43 @@
+@import "../../../../static/styles/variables";
+
+.images {
+  position: relative;
+  padding: 80px 0;
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      position: relative;
+      
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      &__image {
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        transition: $timeMedium;
+        max-height: 900px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    :global {
+      .button {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
